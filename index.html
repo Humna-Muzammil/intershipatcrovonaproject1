@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AI Productivity Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI Productivity Assistant</h1>
+
+    <p class="subtitle">
+        Chat, ask questions, and analyze your documents
+    </p>
+
+
+    <div id="chatbox"></div>
+
+
+    <div class="input-area">
+
+        <input
+            type="text"
+            id="message"
+            placeholder="Ask something..."
+        >
+
+        <button onclick="sendMessage()">
+            Send
+        </button>
+
+    </div>
+
+
+    <div class="document-area">
+
+        <h3>Document Intelligence</h3>
+
+        <input
+            type="file"
+            id="file"
+            accept=".pdf,.txt,.docx"
+        >
+
+        <button onclick="uploadDocument()">
+            Upload Document
+        </button>
+
+        <p id="uploadStatus"></p>
+
+    </div>
+
+
+    <button class="clear"
+            onclick="clearChat()">
+
+        Clear Conversation
+
+    </button>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+</body>
+
+</html>
